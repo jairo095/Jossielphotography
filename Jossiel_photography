@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jossiel Photography</title>
+  <meta name="description" content="Jossiel Photography — Fotografía profesional. Retratos, bodas, lifestyle y más." />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body{
+      margin:0;
+      font-family: 'Montserrat', sans-serif;
+      background:#0d0d0d;
+      color:#f5f5f5;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:0 auto;
+      padding:28px 20px;
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      margin-bottom:28px;
+    }
+
+    /* Logo fotográfico */
+    .logo{
+      width:80px;
+      height:80px;
+      flex-shrink:0;
+    }
+    .logo svg{
+      width:100%;
+      height:100%;
+    }
+
+    .site-title h1{
+      margin:0;
+      font-size:26px;
+      font-weight:700;
+      color:#ffd700; /* dorado elegante */
+    }
+    .site-title p{
+      margin:4px 0 0;
+      font-size:14px;
+      color:#cccccc;
+    }
+
+    .hero{
+      margin:18px 0 28px;
+      border-radius:14px;
+      overflow:hidden;
+      position:relative;
+      border:2px solid #ffd70033;
+    }
+    .hero img{
+      width:100%;
+      height:360px;
+      object-fit:cover;
+      display:block;
+      filter:brightness(0.8);
+    }
+    .hero .cta{
+      position:absolute;
+      left:24px;
+      bottom:18px;
+      background:rgba(0,0,0,0.6);
+      color:#ffd700;
+      padding:12px 18px;
+      border-radius:10px;
+      font-weight:600;
+      font-size:14px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 340px;
+      gap:22px;
+    }
+
+    .about,.aside{
+      background:#1a1a1a;
+      padding:18px;
+      border-radius:12px;
+      border:1px solid #ffd70022;
+    }
+
+    .about h2,.aside h2{
+      margin:0 0 10px;
+      color:#ffd700;
+      font-size:18px;
+    }
+    .about p,.aside p{
+      color:#e0e0e0;
+      font-size:15px;
+    }
+
+    .contact-btn{
+      display:inline-block;
+      text-decoration:none;
+      text-align:center;
+      padding:10px 12px;
+      border-radius:8px;
+      background:#ffd700;
+      color:#0d0d0d;
+      font-weight:700;
+    }
+
+    .gallery{
+      margin-top:16px;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:10px;
+    }
+    .gallery img{
+      width:100%;
+      height:170px;
+      object-fit:cover;
+      border-radius:8px;
+      border:2px solid #ffd70022;
+      transition:transform .2s;
+    }
+    .gallery img:hover{
+      transform:scale(1.04);
+      border-color:#ffd70066;
+    }
+
+    footer{
+      margin-top:28px;
+      text-align:center;
+      color:#999;
+      font-size:13px;
+      border-top:1px solid #333;
+      padding-top:14px;
+    }
+
+    @media (max-width:920px){
+      .grid{ grid-template-columns: 1fr; }
+      .hero img{ height:260px; }
+      .gallery img{ height:140px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <!-- Logo estilo cámara con iniciales JP -->
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="10" y="25" width="80" height="50" rx="8" stroke="#FFD700" stroke-width="4"/>
+          <circle cx="50" cy="50" r="15" stroke="#FFD700" stroke-width="4"/>
+          <text x="50%" y="55%" text-anchor="middle" fill="#FFD700" font-size="18" font-family="Montserrat" font-weight="700">JP</text>
+          <rect x="28" y="15" width="12" height="10" rx="2" fill="#FFD700"/>
+        </svg>
+      </div>
+      <div class="site-title">
+        <h1>Jossiel Photography</h1>
+        <p>Capturando momentos únicos</p>
+      </div>
+    </header>
+
+    <section class="hero">
+      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=1600&auto=format&fit=crop" alt="Fotografía artística">
+      <div class="cta">Reserva tu sesión ahora</div>
+    </section>
+
+    <div class="grid">
+      <article class="about">
+        <h2>Sobre mí</h2>
+        <p>Soy <strong>Jossiel</strong>, fotógrafo enfocado en retratos, eventos y lifestyle. Mi estilo combina elegancia con naturalidad para que cada foto transmita emociones auténticas.</p>
+        
+        <h2 style="margin-top:18px">Portafolio</h2>
+        <div class="gallery">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800" alt="Retrato 1">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800" alt="Retrato 2">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800" alt="Retrato 3">
+        </div>
+      </article>
+
+      <aside class="aside">
+        <h2>Contacto</h2>
+        <p>¿Quieres reservar una sesión o cotizar un evento?</p>
+        <a class="contact-btn" href="mailto:jossiel@example.com">Escríbeme</a>
+      </aside>
+    </div>
+
+    <footer>
+      <p>&copy; <span id="year"></span> Jossiel Photography · Todos los derechos reservados</p>
+    </footer>
+  </div>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
